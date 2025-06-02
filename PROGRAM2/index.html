@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Program 2 - Minor Cycle Load</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+  <header class="header" style="background-color: #315077; color: #ecfdf5; padding: 1rem; display: flex; justify-content: space-between; align-items: center;">
+  <div class="logo" style="font-size: 1.5rem; font-weight: bold;">TATA Suite</div>
+  <nav>
+    <a href="../TATA/index.html" class="nav-link" style="color: #ecfdf5; text-decoration: none;">Home</a>
+  </nav>
+</header>
 
+  <div class="container">
+    <h1>Program 2 - Minor Cycle Load</h1>
+    <p>Upload a text file and enter the CMD code to analyze minor cycle load times.</p>
+
+    <input type="file" id="fileInput" />
+    <input type="text" id="cmdInput" placeholder="Enter CMD (e.g. FBA3)" maxlength="4" />
+    <button id="processBtn">Process</button>
+
+    <div class="outputs">
+      <section>
+        <h2>All Outputs</h2>
+        <pre id="outputAll"></pre>
+        <button id="downloadAll">Download All</button>
+      </section>
+      <section>
+        <h2>MC1 Outputs</h2>
+        <pre id="outputMC1"></pre>
+        <button id="downloadMC1">Download MC1</button>
+      </section>
+      <section>
+        <h2>MC2 Outputs</h2>
+        <pre id="outputMC2"></pre>
+        <button id="downloadMC2">Download MC2</button>
+      </section>
+      <section>
+        <h2>MC3 Outputs</h2>
+        <pre id="outputMC3"></pre>
+        <button id="downloadMC3">Download MC3</button>
+      </section>
+      <section>
+        <h2>MC4 Outputs</h2>
+        <pre id="outputMC4"></pre>
+        <button id="downloadMC4">Download MC4</button>
+      </section>
+    </div>
+
+    <div id="zoomControls" class="zoom-controls">
+      <button id="zoomIn">Zoom In</button>
+      <button id="zoomOut">Zoom Out</button>
+      <button id="reset">Reset Zoom</button>
+    </div>
+
+    <div id="plotCanvas" class="plotly-graph"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
