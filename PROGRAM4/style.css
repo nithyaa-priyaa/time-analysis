@@ -1,1 +1,145 @@
+/* General dark mode styling */
+body {
+  background-color: #121212;
+  color: #eee;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
 
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+h1, h2 {
+  color: #00ccff;
+}
+
+.input-section {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 6px;
+}
+
+input[type="text"], input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border: 2px solid #00ccff;
+}
+
+button#processBtn {
+  background-color: #00ccff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #121212;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-bottom: 30px;
+  transition: background-color 0.3s ease;
+}
+
+button#processBtn:hover {
+  background-color: #008bbd;
+}
+
+/* Preview container grid: 3 per row */
+.preview-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 18px;
+  margin-bottom: 40px;
+}
+
+/* Individual preview box style */
+.preview-box {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  border: 1px solid #333;
+  padding: 12px 14px 14px 14px;
+  position: relative;
+  max-height: 220px;
+  overflow-y: auto;
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: #ddd;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Title at top of preview box */
+.preview-box .title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+  color: #00ccff;
+}
+
+/* Download button top-right inside preview box */
+.preview-box button.download-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #00ccff;
+  border: none;
+  color: #121212;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background-color 0.2s ease;
+}
+
+.preview-box button.download-btn:hover {
+  background-color: #008bbd;
+}
+
+/* Filter buttons container */
+.filter-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Individual filter button */
+.filter-buttons button {
+  background-color: #222;
+  border: 2px solid #00ccff;
+  color: #00ccff;
+  font-weight: 600;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.filter-buttons button.active,
+.filter-buttons button:hover {
+  background-color: #00ccff;
+  color: #121212;
+}
+
+/* Plot container */
+.plot-container {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  border: 1px solid #333;
+  padding: 10px;
+  min-height: 420px;
+}

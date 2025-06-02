@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Program 4 - Time Difference of Multiple CMDs</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+  <header class="header" style="background-color: #569daf; color: #fef2f2; padding: 1rem; display: flex; justify-content: space-between; align-items: center;">
+  <div class="logo" style="font-size: 1.5rem; font-weight: bold;">TATA Suite</div>
+  <nav>
+    <a href="../TATA/index.html" class="nav-link" style="color: #fef2f2; text-decoration: none;">Home</a>
+  </nav>
+</header>
+<div class="container">
+    <h1>Program 4 - Time Difference of Multiple CMDs</h1>
+    <p>Upload your input file <code>mulcmdtime.txt</code> and enter CMDs (comma or space separated). Separate output files & plots will be generated per CMD.</p>
 
+    <div class="input-section">
+      <label for="fileInput">Select Input File (mulcmdtime.txt):</label>
+      <input type="file" id="fileInput" accept=".txt,.dat,.csv" />
+    </div>
+
+    <div class="input-section">
+      <label for="cmdInput">Enter CMDs (comma or space separated):</label>
+      <input type="text" id="cmdInput" placeholder="E.g. FBA3, 5492, 0B83, 29C0, 2FC8" />
+    </div>
+
+    <button id="processBtn">Process File & Generate Outputs</button>
+
+    <hr />
+
+    <h2>Output Previews</h2>
+    <div id="previewContainer" class="preview-container"></div>
+
+    <hr />
+
+    <h2>Plot Filter (Select CMDs to Show)</h2>
+    <div id="filterButtons" class="filter-buttons"></div>
+
+    <div id="plotContainer" class="plot-container"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
