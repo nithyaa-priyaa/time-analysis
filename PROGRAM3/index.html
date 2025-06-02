@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Program 3 - Time Difference of One CMD</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+  <header class="header" style="background-color: #4c1d95; color: #ede9fe; padding: 1rem; display: flex; justify-content: space-between; align-items: center;">
+  <div class="logo" style="font-size: 1.5rem; font-weight: bold;">TATA Suite</div>
+  <nav>
+    <a href="../TATA/index.html" class="nav-link" style="color: #ede9fe; text-decoration: none;">Home</a>
+  </nav>
+</header>
 
+  <div class="container">
+    <h1>Program 3 - Time Difference of One CMD</h1>
+    <p>Upload input file and enter the CMD code to analyze time differences and minor cycles MC1-MC4.</p>
+
+    <label for="fileInput">Select Input File (cmddiffinput.txt):</label>
+    <input type="file" id="fileInput" accept=".txt,.dat,.csv" />
+
+    <label for="cmdInput">Enter CMD (e.g., FBA3):</label>
+    <input type="text" id="cmdInput" placeholder="Enter CMD code here" maxlength="10" />
+
+    <button id="processBtn">Process File</button>
+
+    <h2>Output</h2>
+    <textarea id="allDiffOutput" readonly placeholder="All time differences output here..."></textarea>
+
+    <h2>View / Download Minor Cycle Files</h2>
+    <div class="mc-buttons">
+      <button class="mc-btn" data-index="0">View/Download MC1</button>
+      <button class="mc-btn" data-index="1">View/Download MC2</button>
+      <button class="mc-btn" data-index="2">View/Download MC3</button>
+      <button class="mc-btn" data-index="3">View/Download MC4</button>
+    </div>
+
+    <div id="mcPreviews"></div>
+
+    <h2>Plot - Minor Cycles MC1 to MC4</h2>
+    <div id="plotDiv" style="width: 100%; height: 600px;"></div>
+
+    <div id="status"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
