@@ -1,1 +1,125 @@
+/* Dark mode */
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
 
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+h1, h2 {
+  color: rgb(240, 141, 202);
+}
+
+input[type="file"], input[type="number"] {
+  margin: 10px 5px 20px 0;
+  padding: 6px 10px;
+  background-color: #222;
+  border: 1px solid #555;
+  color: #eee;
+  border-radius: 4px;
+}
+
+input[type="number"]::placeholder {
+  color: #999;
+}
+
+button {
+  background-color: rgb(240, 141, 202);
+  border: none;
+  padding: 8px 15px;
+  margin-left: 5px;
+  color: #121212;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color:rgb(240, 141, 202);
+}
+
+.status {
+  margin-top: 10px;
+  font-style: italic;
+  color: #aaa;
+}
+
+/* Preview box */
+.preview-box {
+  position: relative;
+  background-color: #222;
+  border: 1px solid #444;
+  border-radius: 5px;
+  padding: 10px;
+  max-height: 250px;
+  overflow: auto;
+  margin-bottom: 30px;
+  font-family: monospace;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Download button top-right in preview */
+.download-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  padding: 4px 8px;
+  font-size: 12px;
+  background-color: rgb(240, 141, 202);
+  color: #121212;
+  border-radius: 3px;
+  z-index: 10;
+}
+
+/* Minor cycles preview grid */
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+/* Plot buttons container */
+.plot-buttons {
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.plot-buttons button {
+  background-color: #444;
+  color: #ffcc00;
+  border: 1px solid #ffcc00;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.plot-buttons button.active,
+.plot-buttons button:hover {
+  background-color: #ffcc00;
+  color: #121212;
+  border-color: #ffaa00;
+}
+
+/* Scrollbar styling */
+.preview-box::-webkit-scrollbar {
+  width: 10px;
+}
+
+.preview-box::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.preview-box::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 5px;
+}

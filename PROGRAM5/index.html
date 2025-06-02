@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Program 5 - Minor Cycle CMD Messages</title>
+<link rel="stylesheet" href="style.css" />
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+  <header class="header" style="background-color: rgb(130, 90, 115); color: #fff7ed; padding: 1rem; display: flex; justify-content: space-between; align-items: center;">
+  <div class="logo" style="font-size: 1.5rem; font-weight: bold;">TATA Suite</div>
+  <nav>
+    <a href="../TATA/index.html" class="nav-link" style="color: #fff7ed; text-decoration: none;">Home</a>
+  </nav>
+</header>
 
+  <div class="container">
+    <h1>Program 5 - Minor Cycle CMD Messages</h1>
+    <p>Upload your input file and enter number of minor cycles to analyze.</p>
+
+    <input type="file" id="fileInput" accept=".txt,.dat,.csv" />
+    <input type="number" id="minorCycleCount" placeholder="Enter number of minor cycles" min="1" />
+    <button id="processBtn">Process Minor Cycles</button>
+    <p id="status" class="status"></p>
+
+    <h2>Combined Output Preview (All Minor Cycles)</h2>
+    <div id="combinedPreview" class="preview-box">
+      <button class="download-btn" id="downloadCombined">Download Combined Output</button>
+      <pre id="combinedText"></pre>
+    </div>
+
+    <h2>Minor Cycles Preview</h2>
+    <div id="minorCyclesContainer" class="preview-grid"></div>
+
+    <h2>Plot - Time Differences per Minor Cycle</h2>
+    <div id="plotControls" class="plot-buttons"></div>
+    <div id="plotArea" style="width: 100%; height: 450px;"></div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
