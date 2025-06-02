@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Program 1 - Time Differences between 2 CMDs</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+  <header class="header" style="background-color: #1e293b; color: #f8fafc; padding: 1rem; display: flex; justify-content: space-between; align-items: center;">
+  <div class="logo" style="font-size: 1.5rem; font-weight: bold;">TATA Suite</div>
+  <nav>
+    <a href="../TATA/index.html" class="nav-link" style="color: #f8fafc; text-decoration: none;">Home</a>
+  </nav>
+</header>
+  <div class="container">
+    <h1>Program 1 - Time Differences between 2 CMDs</h1>
+    <p class="description">
+      <strong>Program Description:</strong> This tool processes a time log file containing CMD and TIME entries,
+      extracts occurrences of two specified CMD codes, calculates absolute time differences between
+      corresponding CMD pairs, and visualizes the results. Interactive zoom and pan controls with custom cursors
+      enhance data exploration.
+    </p>
 
+    <div class="input-group">
+      <label for="inputFile">Upload Input File (.txt):</label>
+      <input type="file" id="inputFile" accept=".txt,.dat,.csv" />
+    </div>
+
+    <div class="input-group">
+      <label for="cmd1">Enter CMD1 Code (e.g., CMD1):</label>
+      <input type="text" id="cmd1" placeholder="Enter first CMD code" />
+    </div>
+
+    <div class="input-group">
+      <label for="cmd2">Enter CMD2 Code (e.g., CMD2):</label>
+      <input type="text" id="cmd2" placeholder="Enter second CMD code" />
+    </div>
+
+    <button id="processBtn">Process File</button>
+
+    <div id="status"></div>
+
+    <pre id="outputPreview" class="output-preview"></pre>
+
+    <div id="downloadSection" style="display:none;">
+      <a id="downloadBtn" href="#" download="Finaloutput.txt">Download Output File</a>
+    </div>
+
+    <div id="plot" class="plot-container"></div>
+
+    <div class="cursor-controls">
+      <button id="panBtn" class="cursor-btn active" title="Pan (Hand Cursor)">🖐️ Pan</button>
+      <button id="zoomInBtn" class="cursor-btn" title="Zoom In (+ Magnifier)">🔍+</button>
+      <button id="zoomOutBtn" class="cursor-btn" title="Zoom Out (- Magnifier)">🔍−</button>
+      <button id="resetViewBtn" class="cursor-btn" title="Reset View">🔄 Reset</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
